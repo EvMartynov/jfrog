@@ -110,7 +110,8 @@ Mappings:
     us-east-1:
       AMI: "ami-0affd4508a5d2481b"
     us-east-2:
-      AMI: "ami-01e36b7901e884a10"
+      AMI: "ami-05a36e1502605b4aa"
+      #AMI: "ami-01e36b7901e884a10"
     us-gov-east-1:
       AMI: "ami-00e30c71"
     us-gov-west-1:
