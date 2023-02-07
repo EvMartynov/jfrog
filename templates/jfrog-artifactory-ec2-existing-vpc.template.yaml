@@ -379,6 +379,7 @@ Parameters:
 Conditions:
   HasSecondaryNodes: !Not [!Equals [!Ref NumberOfSecondary, "0"]]
   DefaultJava: !Equals [!Ref DefaultJavaMemSettings, "true"]
+  UsingDefaultBucket: !Equals [!Ref QsS3BucketName, ""]
   SmCertNameNotExists: !Equals [!Ref "SmCertName", ""]
   SmCertNameExists: !Not [!Equals [!Ref "SmCertName", ""]]
 
