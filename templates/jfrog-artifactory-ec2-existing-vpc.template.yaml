@@ -17,7 +17,6 @@ Metadata:
         Parameters:
           - KeyPairName
           - AccessCidr
-          - RemoteAccessCidr
       - Label:
           default: Network configuration
         Parameters:
@@ -85,8 +84,6 @@ Metadata:
         default: Private subnet 2 CIDR
       AccessCidr:
         default: Permitted IP range
-      RemoteAccessCidr:
-        default: Remote access CIDR
       ELBScheme:
         default: Elastic Load Balancing scheme
       VolumeSize:
@@ -176,14 +173,6 @@ Parameters:
       We recommend that you set this value to a trusted IP range.
       For example, you might want to grant only your corporate network access to the software.
     AllowedPattern: ^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))$
-    Type: String
-  RemoteAccessCidr:
-    Description:
-      Remote CIDR range that allows you to connect to the bastion instance by using SSH.
-      We recommend that you set this value to a trusted IP range.
-      For example, you might want to grant specific ranges inside your corporate network SSH access.
-    AllowedPattern: ^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(\/([0-9]|[1-2][0-9]|3[0-2]))$
-    ConstraintDescription: CIDR block parameter must be in the form x.x.x.x/x
     Type: String
   ELBScheme:
     Description: Choose whether this is internet facing or internal.
